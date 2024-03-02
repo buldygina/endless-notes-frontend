@@ -1,0 +1,12 @@
+{
+  "appId": "io.ionic.notes",
+  "appName": "notes",
+  "npmClient": "pnpm",
+  "webDir": "dist",
+  "cordova": {},
+  "plugins": {
+    "CapacitorCookies": {
+      "enabled": true
+    }
+  }
+}
