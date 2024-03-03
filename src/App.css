@@ -1,0 +1,14 @@
+.searchbar {
+    width: 300px;
+    border-radius: 25px;
+    padding-left: 15px;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0;
+}
+.notes {
+
+
+}
