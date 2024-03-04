@@ -8,7 +8,17 @@
     flex-direction: row;
     padding: 20px 0;
 }
-.notes {
-
-
+.logo {
+    display: flex;
+    min-width: 100%;
+    justify-content: center ;
 }
+.logo img {
+    width: 250px;
+}
+.registration {
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+}
+

@@ -20,6 +20,9 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
+import Register from "./pages/Register.jsx";
+import Login from "./pages/Login.jsx";
+import Note from "./pages/Note.jsx";
 
 setupIonicReact()
 
@@ -30,6 +33,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <IonReactRouter>
                     <IonRouterOutlet>
                         <Route path={"/"} component={App}/>
+                        <Route path={"/register"} component={Register}/>
+                        <Route path={"/login"} component={Login}/>
+                        <Route path={"/note"} component={Note}/>
                     </IonRouterOutlet>
                 </IonReactRouter>
             </IonApp>
