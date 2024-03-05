@@ -1,5 +1,5 @@
 import {IonButton, IonIcon, IonInput, IonItem, IonList, IonPage} from "@ionic/react";
-import uninote from "../assets/uninote.jpg"
+import uninote from "../assets/Union.svg"
 const Register = () => {
     return (
         <IonPage>
@@ -10,13 +10,13 @@ const Register = () => {
                     <IonInput label="Username" placeholder="Enter your username"></IonInput>
                 </IonItem>
                 <IonItem>
-                    <IonInput label="Mail" placeholder="Enter your mail"></IonInput>
+                    <IonInput label="Email input" type="email" placeholder="email@domain.com"></IonInput>
                 </IonItem>
                 <IonItem>
-                    <IonInput label="Password" placeholder="Enter your password"></IonInput>
+                    <IonInput label="Password input" type="password" value="password"></IonInput>
                 </IonItem>
                 <IonItem>
-                    <IonInput label="Repeat password" placeholder="Enter your password"></IonInput>
+                    <IonInput label="Repeat your password" type="password" value="password"></IonInput>
                 </IonItem>
             </IonList>
                 <IonButton>Register</IonButton>

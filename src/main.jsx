@@ -23,6 +23,7 @@ import '@ionic/react/css/display.css';
 import Register from "./pages/Register.jsx";
 import Login from "./pages/Login.jsx";
 import Note from "./pages/Note.jsx";
+import Code from "./pages/Code.jsx";
 
 setupIonicReact()
 
@@ -36,6 +37,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         <Route path={"/register"} component={Register}/>
                         <Route path={"/login"} component={Login}/>
                         <Route path={"/note"} component={Note}/>
+                        <Route path={"/code"} component={Code}/>
                     </IonRouterOutlet>
                 </IonReactRouter>
             </IonApp>

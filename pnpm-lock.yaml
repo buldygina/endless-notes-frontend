@@ -44,6 +44,12 @@ dependencies:
   react-router-dom:
     specifier: ^5.0.1
     version: 5.3.4(react@18.2.0)
+  suneditor:
+    specifier: ^2.45.1
+    version: 2.45.1
+  suneditor-react:
+    specifier: ^3.6.1
+    version: 3.6.1(react-dom@18.2.0)(react@18.2.0)(suneditor@2.45.1)
 
 devDependencies:
   '@capacitor/cli':
@@ -2725,6 +2731,22 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
     dev: true
+
+  /suneditor-react@3.6.1(react-dom@18.2.0)(react@18.2.0)(suneditor@2.45.1):
+    resolution: {integrity: sha512-12f9KLnEB6pAdyHJINTzRBg3UOWVZZ+jVYSEtwdBTDYQW4amUZr0xOnpikbBAlxb9rcTYV5RHAsad3gnNhLsuA==}
+    peerDependencies:
+      react: '>= 16.8.0'
+      react-dom: '>= 16.8.0'
+      suneditor: ^2.44.10
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      suneditor: 2.45.1
+    dev: false
+
+  /suneditor@2.45.1:
+    resolution: {integrity: sha512-fLxc0nLwd77vaPuf78D+VAFNAgX9hLps6h96JA/LUCpqt4LeYnEaIE1RfJojX+BhSA+krl5qZ8pdgqcoo3dN3g==}
+    dev: false
 
   /supports-color@7.2.0:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}

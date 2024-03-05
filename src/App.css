@@ -14,11 +14,37 @@
     justify-content: center ;
 }
 .logo img {
-    width: 250px;
+    width: 200px;
+    padding-top: 20px;
 }
 .registration {
     display: flex;
     flex-direction: column;
     row-gap: 35px;
 }
-
+.headerNotes {
+    display: flex;
+}
+.headerNote {
+    display: flex;
+    justify-content: space-between;
+}
+.text {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+.account {
+    width: 300px;
+}
+.headerAcc {
+    display: flex;
+    justify-content: space-between;
+    gap: 55px;
+}
+.accountLog {
+    padding-top: 40px;
+}
+.theme {
+    padding-top: 40px;
+}
