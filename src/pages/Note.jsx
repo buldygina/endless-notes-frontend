@@ -12,8 +12,6 @@ const Note = () => {
 																	  icon={arrowBackOutline}></IonIcon></IonButton>
 					<div className={"headerNotes"}>
 						<IonButton fill={'clear'} color={'dark'}><IonIcon slot={"icon-only"}
-																		  icon={readerOutline}></IonIcon></IonButton>
-						<IonButton fill={'clear'} color={'dark'}><IonIcon slot={"icon-only"}
 																		  icon={heartOutline}></IonIcon></IonButton>
 						<IonButton fill={'clear'} color={'dark'}><IonIcon slot={"icon-only"}
 																		  icon={createOutline}></IonIcon></IonButton>
