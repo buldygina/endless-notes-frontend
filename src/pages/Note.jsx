@@ -1,4 +1,4 @@
-import {IonButton, IonContent, IonIcon, IonPage, IonText} from "@ionic/react";
+import {IonButton, IonContent, IonIcon, IonInput, IonItem, IonList, IonPage, IonText} from "@ionic/react";
 import {arrowBackOutline, createOutline, heartOutline, readerOutline} from "ionicons/icons";
 import 'suneditor/dist/css/suneditor.min.css';
 import SunEditor from "suneditor-react";
@@ -16,14 +16,15 @@ const Note = () => {
                 </div>
                 </div>
                 <div className={"text"}>
-                <IonText color="black">
-                    <h1>Список продуктов</h1>
-                </IonText>
+                    <IonList>
+                        <IonItem>
+                            <IonInput placeholder="Напишите текст"></IonInput>
+                        </IonItem>
+                    </IonList>
                 <IonText color="black">
                     <div>
                         <SunEditor
                             name={"Создать новость"}
-                            lang="ru"
                             autoFocus
                             placeholder={"Начните печатать...."}
                             setOptions={{
