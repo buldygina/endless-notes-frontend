@@ -1,0 +1,31 @@
+.editor__aria {
+    border: none;
+    outline: none;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.editor__aria:focus {
+    border: none;
+}
+
+.editor__toolbar__container {
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+
+}
+
+.editor__toolbar {
+    display: flex;
+    align-items: center;
+    background: black;
+    min-width: 90%;
+    border-radius: 15px;
+    color: white;
+    padding: 5px 15px 5px 15px;
+}

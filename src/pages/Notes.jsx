@@ -1,27 +1,16 @@
 import {
-    IonButton,
     IonCard,
     IonCardContent,
-    IonContent, IonFab, IonFabButton,
-    IonIcon, IonPage,
+    IonContent,
+    IonFab,
+    IonFabButton,
+    IonIcon,
+    IonPage,
     IonSearchbar,
     IonSegment,
     IonSegmentButton
 } from "@ionic/react";
-import {
-    add,
-    barbell,
-    basket,
-    call,
-    globe,
-    heart,
-    home,
-    notificationsOutline,
-    person,
-    pin,
-    star,
-    trash
-} from "ionicons/icons";
+import { add, barbell, basket, call, globe, heart, home, person, pin, star, trash } from "ionicons/icons";
 
 const Notes = () => {
     return (
@@ -29,8 +18,6 @@ const Notes = () => {
             <IonContent>
                 <div className={"header"}>
                     <div className={"searchbar"}><IonSearchbar></IonSearchbar></div>
-                    <div className={"notification"}><IonButton fill={'clear'} color={'dark'}> <IonIcon
-                        slot={"icon-only"} icon={notificationsOutline}></IonIcon></IonButton></div>
                 </div>
                 <div className={"segment"}>
                     <IonSegment scrollable={true} value="heart">
