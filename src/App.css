@@ -1,7 +1,7 @@
 .searchbar {
-    width: 300px;
+    width: 100%;
     border-radius: 25px;
-    padding-left: 15px;
+    padding-inline: 15px;
 }
 .header {
     display: flex;
@@ -30,9 +30,11 @@
     justify-content: space-between;
 }
 .text {
+    height: 100%;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 20px;
+    padding-bottom: 10%;
 }
 .account {
     width: 300px;

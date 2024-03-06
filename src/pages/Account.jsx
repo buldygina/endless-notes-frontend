@@ -11,25 +11,33 @@ import {
 } from "@ionic/react";
 import {arrowBackOutline, enterOutline} from "ionicons/icons";
 import person from "../assets/person-circle-sharp .png"
+import { useHistory } from "react-router-dom";
 const Account = () => {
+	const router = useHistory()
+	const backToMainPage = () => {
+		router.replace("/tabs/notes")
+	}
+	const logOut = () => {
+		router.replace("/login")
+	}
     return (
         <IonPage>
             <IonContent>
                 <div className={"headerAcc"}>
-            <IonButton fill={'clear'} color={'dark'}> <IonIcon slot={"icon-only"} icon={arrowBackOutline}></IonIcon></IonButton>
+            <IonButton onClick={backToMainPage} fill={'clear'} color={'dark'}> <IonIcon slot={"icon-only"} icon={arrowBackOutline}></IonIcon></IonButton>
             <div className={"account"}><img src={person} alt=""/></div>
-            <IonButton fill={'clear'} color={'dark'}> <IonIcon slot={"icon-only"} icon={enterOutline}></IonIcon></IonButton>
+            <IonButton onClick={logOut} fill={'clear'} color={'dark'}> <IonIcon slot={"icon-only"} icon={enterOutline}></IonIcon></IonButton>
                 </div>
                 <div className={"accountLog"}>
                 <IonList>
                     <IonItem>
-                        <IonInput label="Username" placeholder="Enter your username"></IonInput>
+                        <IonInput label="Username" placeholder="Enter your username" disabled/>
                     </IonItem>
                     <IonItem>
-                        <IonInput label="Email input" type="email" placeholder="email@domain.com"></IonInput>
+                        <IonInput label="Email input" type="email" placeholder="email@domain.com" disabled/>
                     </IonItem>
                     <IonItem>
-                        <IonInput label="Password input" type="password" value="password"></IonInput>
+                        <IonInput label="Password input" type="password" value="password" disabled/>
                     </IonItem>
                 </IonList>
                 </div>

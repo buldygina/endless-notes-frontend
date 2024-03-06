@@ -5,7 +5,7 @@ import './index.css'
 import {CookiesProvider} from "react-cookie";
 import {IonApp, IonRouterOutlet, setupIonicReact} from "@ionic/react";
 import {IonReactRouter} from "@ionic/react-router";
-import {Route} from "react-router-dom";
+import { Redirect, Route } from "react-router-dom";
 
 /* Basic CSS for apps built with Ionic */
 import '@ionic/react/css/core.css'
@@ -33,11 +33,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <IonApp>
                 <IonReactRouter>
                     <IonRouterOutlet>
-                        <Route path={"/"} component={App}/>
+                        <Route path={"/"} exact>
+                            <Redirect to={"/tabs"}/>
+                        </Route>
                         <Route path={"/register"} component={Register}/>
-                        <Route path={"/login"} component={Login}/>
+                        <Route path={"/login"} exact component={Login}/>
                         <Route path={"/note"} component={Note}/>
                         <Route path={"/code"} component={Code}/>
+                        <Route path={"/tabs"} render={() => <App/>}/>
                     </IonRouterOutlet>
                 </IonReactRouter>
             </IonApp>
