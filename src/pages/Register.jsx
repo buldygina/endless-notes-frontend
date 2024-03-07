@@ -1,6 +1,11 @@
 import {IonButton, IonIcon, IonInput, IonItem, IonList, IonPage} from "@ionic/react";
 import uninote from "../assets/Union.svg"
+import {useHistory} from "react-router-dom";
 const Register = () => {
+    const router = useHistory()
+    const registerAccount = () => {
+        router.replace('/')
+    }
     return (
         <IonPage>
             <div className={"registration"}>
@@ -19,7 +24,7 @@ const Register = () => {
                     <IonInput label="Repeat your password" type="password" value="password"></IonInput>
                 </IonItem>
             </IonList>
-                <IonButton>Register</IonButton>
+                <IonButton onClick={registerAccount}>Register</IonButton>
             </div>
         </IonPage>
     )

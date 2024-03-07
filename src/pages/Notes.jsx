@@ -11,8 +11,12 @@ import {
     IonSegmentButton
 } from "@ionic/react";
 import { add, barbell, basket, call, globe, heart, home, person, pin, star, trash } from "ionicons/icons";
-
+import {useHistory} from "react-router-dom";
 const Notes = () => {
+    const router = useHistory()
+    const addNote = () => {
+        router.replace("/note")
+    }
     return (
         <IonPage>
             <IonContent>
@@ -92,8 +96,8 @@ const Notes = () => {
                             курсы.</IonCardContent>
                     </IonCard>
                 </div>
-                <IonFab slot="fixed" vertical="bottom" horizontal="end">
-                    <IonFabButton>
+                <IonFab  slot="fixed" vertical="bottom" horizontal="end" >
+                    <IonFabButton onClick={addNote}>
                         <IonIcon icon={add}></IonIcon>
                     </IonFabButton>
                 </IonFab>
