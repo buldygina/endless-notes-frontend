@@ -17,11 +17,11 @@ function App() {
             <IonTabBar slot="bottom">
                 <IonTabButton tab="notes" href="/tabs/notes">
                     <IonIcon icon={readerOutline}/>
-                    <IonLabel>Notes</IonLabel>
+                    <IonLabel>Заметки</IonLabel>
                 </IonTabButton>
                 <IonTabButton tab="account" href="/tabs/account">
                     <IonIcon icon={personOutline} />
-                    <IonLabel>Account</IonLabel>
+                    <IonLabel>Аккаунт</IonLabel>
                 </IonTabButton>
             </IonTabBar>
         </IonTabs>
