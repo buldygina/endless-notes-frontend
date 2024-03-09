@@ -17,11 +17,14 @@ const Notes = () => {
     const addNote = () => {
         router.replace("/note")
     }
+    const readNote = () => {
+        router.replace('/note')
+    }
     return (
         <IonPage>
             <IonContent>
                 <div className={"header"}>
-                    <div className={"searchbar"}><IonSearchbar></IonSearchbar></div>
+                    <div className={"searchbar"}><IonSearchbar placeholder={"Поиск заметок"}/></div>
                 </div>
                 <div className={"segment"}>
                     <IonSegment scrollable={true} value="heart">
@@ -58,40 +61,40 @@ const Notes = () => {
                     </IonSegment>
                 </div>
                 <div className={"notes"}>
-                    <IonCard>
+                    <IonCard onClick={readNote}>
                         <IonCardContent>Записать идеи для нового проекта в блокнот.</IonCardContent>
                     </IonCard>
-                    <IonCard>
+                    <IonCard onClick={readNote}>
                         <IonCardContent>Проверить актуальные новости перед обсуждением с коллегами на
                             собрании.</IonCardContent>
                     </IonCard>
-                    <IonCard>
+                    <IonCard onClick={readNote}>
                         <IonCardContent>Проверить список покупок перед походом в магазин: молоко, яйца, хлеб,
                             фрукты.</IonCardContent>
                     </IonCard>
-                    <IonCard>
+                    <IonCard onClick={readNote}>
                         <IonCardContent>Проверить график поездок на эту неделю и обновить бронирования при
                             необходимости.</IonCardContent>
                     </IonCard>
-                    <IonCard>
+                    <IonCard onClick={readNote}>
                         <IonCardContent>Проверить состояние счета в банке и оплатить коммунальные
                             услуги.</IonCardContent>
                     </IonCard>
-                    <IonCard>
+                    <IonCard onClick={readNote}>
                         <IonCardContent>Найти время для тихого отдыха и чтения новой книги.</IonCardContent>
                     </IonCard>
-                    <IonCard>
+                    <IonCard onClick={readNote}>
                         <IonCardContent>Подготовить список вопросов для интервью с потенциальным кандидатом на
                             работу.</IonCardContent>
                     </IonCard>
-                    <IonCard>
+                    <IonCard onClick={readNote}>
                         <IonCardContent>Напомнить другу о встрече и подтвердить место и время.</IonCardContent>
                     </IonCard>
-                    <IonCard>
+                    <IonCard onClick={readNote}>
                         <IonCardContent>Подумать над идеями подарков к предстоящим праздникам для
                             близких.</IonCardContent>
                     </IonCard>
-                    <IonCard>
+                    <IonCard onClick={readNote}>
                         <IonCardContent>Научиться новому навыку или языку, используя онлайн-ресурсы или
                             курсы.</IonCardContent>
                     </IonCard>
