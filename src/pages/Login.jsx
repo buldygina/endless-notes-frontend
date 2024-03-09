@@ -1,5 +1,5 @@
 import {IonButton, IonInput, IonItem, IonList, IonPage} from "@ionic/react";
-import uninote from "../assets/Union.svg";
+import Uninote from "../assets/Union.svg?react";
 import {useHistory} from "react-router-dom";
 
 const Login = () => {
@@ -10,7 +10,7 @@ const Login = () => {
     return (
         <IonPage>
             <div className={"registration"}>
-                <div className={"logo"}> <img src={uninote} alt=""/></div>
+                <div className={"logo"}><Uninote/></div>
                 <IonList>
                     <IonItem>
                         <IonInput label="Username" placeholder="Enter your username"></IonInput>
