@@ -12,9 +12,11 @@ import {
 import {arrowBackOutline, enterOutline} from "ionicons/icons";
 import person from "../assets/person-circle-sharp .png"
 import {useHistory} from "react-router-dom";
+import {useSelector} from "react-redux";
 
 const Account = () => {
     const router = useHistory()
+    const {username} = useSelector(state => state.user)
     const backToMainPage = () => {
         router.replace("/tabs/notes")
     }
@@ -22,13 +24,13 @@ const Account = () => {
         router.replace("/login")
     }
     const toggleTheme = (value) => {
-        document.body.classList.toggle("dark")
+        if (value === "dark") document.body.classList.add("dark")
+        else (document.body.classList.remove("dark"))
     }
     return (
         <IonPage>
             <IonContent>
                 <div className={"headerAcc"}>
-                    {/*<IonButton onClick={backToMainPage} fill={'clear'} color={'dark'}> <IonIcon slot={"icon-only"} icon={arrowBackOutline}></IonIcon></IonButton>*/}
                     <div className={"account"}>
                         <img src={person} alt=""/>
                     </div>
@@ -39,7 +41,7 @@ const Account = () => {
                 <div className={"accountLog"}>
                     <IonList>
                         <IonItem>
-                            <IonInput label="Логин" placeholder="Ваше имя   " disabled/>
+                            <IonInput value={username} label="Логин" placeholder="Ваше имя   " disabled/>
                         </IonItem>
                         <IonItem>
                             <IonInput label="Почта" type="email" placeholder="email@domain.com" disabled/>
@@ -58,8 +60,8 @@ const Account = () => {
                                 placeholder="Выбрать тему"
                                 onIonChange={(e) => toggleTheme(e.detail.value)}
                             >
-                                <IonSelectOption value="light">Тёмная</IonSelectOption>
-                                <IonSelectOption value="dark">Светлая</IonSelectOption>
+                                <IonSelectOption value="light">Светлая</IonSelectOption>
+                                <IonSelectOption value="dark">Тёмная</IonSelectOption>
                             </IonSelect>
                         </IonItem>
                     </IonList>

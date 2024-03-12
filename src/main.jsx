@@ -6,7 +6,7 @@ import {CookiesProvider} from "react-cookie";
 import {IonApp, IonRouterOutlet, setupIonicReact} from "@ionic/react";
 import {IonReactRouter} from "@ionic/react-router";
 import { Redirect, Route } from "react-router-dom";
-
+import {Provider} from "react-redux";
 /* Basic CSS for apps built with Ionic */
 import '@ionic/react/css/core.css'
 import '@ionic/react/css/normalize.css';
@@ -24,13 +24,14 @@ import Register from "./pages/Register.jsx";
 import Login from "./pages/Login.jsx";
 import Note from "./pages/Note.jsx";
 import Code from "./pages/Code.jsx";
-
+import store from "./store/index.jsx";
 setupIonicReact()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <CookiesProvider>
             <IonApp>
+                <Provider store={store}>
                 <IonReactRouter>
                     <IonRouterOutlet>
                         <Route path={"/"} exact>
@@ -43,6 +44,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         <Route path={"/tabs"} render={() => <App/>}/>
                     </IonRouterOutlet>
                 </IonReactRouter>
+                </Provider>
             </IonApp>
         </CookiesProvider>
     </React.StrictMode>,
